@@ -19,15 +19,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/innoom/node_utils.git"
+    "url": "url_git"
   },
   "keywords": [],
   "author": "innoom",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/innoom/node_utils.git/issues"
+    "url": "https://github.com/innoom/path_project_git/issues"
   },
-  "homepage": "https://github.com/innoom/node_utils.git#readme",
+  "homepage": "https://github.com/path_project_git#readme",
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.13",
@@ -49,7 +49,4 @@
   "files": [
     "lib/**/*"
   ],
-  "dependencies": {
-    "@pusher/push-notifications-server": "^1.2.4"
-  }
 }
