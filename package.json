@@ -9,6 +9,7 @@
     "test": "jest --config jestconfig.json",
     "format": "prettier --write src/**/*.ts",
     "lint": "eslint . --ext .ts",
+    "coverage": "typescript-coverage-report",
     "prepare": "rimraf ./lib && npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
@@ -27,6 +28,17 @@
   "bugs": {
     "url": "https://github.com/innoom/path_project_git/issues"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "homepage": "https://github.com/path_project_git#readme",
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
@@ -44,9 +56,13 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "typescript-coverage-report": "^0.6.4"
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "ts-coverage": "^0.1.5"
+  }
 }
