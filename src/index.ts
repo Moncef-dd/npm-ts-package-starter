@@ -1,5 +1,2 @@
-const exampleToTest = () => {
-  return "Hello World"
-}
-
+const exampleToTest = () => 'Hello World';
 export default exampleToTest;

@@ -2,12 +2,18 @@
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
+    "plugin:import/recommended",
     "airbnb"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "import"],
   "rules": {
-    "prettier/prettier": "warn"
+    "prettier/prettier": "warn",
+    "import/extensions" : [
+      "error",
+      "ignorePackages",
+      { "ts" : "never", "tsx" : "never"}
+    ]
   },
   "overrides": [
     {
@@ -17,5 +23,16 @@
       }
     }
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "env": {
+    "jest": true
+  }
 
 }
+
