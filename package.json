@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "npm_package_starter",
   "version": "1.0.2",
   "description": "",
   "main": "index.ts",
@@ -12,8 +12,8 @@
     "coverage": "typescript-coverage-report",
     "prepare": "rimraf ./lib && npm run build",
     "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
+    "preversion": "npm run lint && npm run format && npm run test",
+    "version": "git add -A src",
     "postversion": "git push && git push --tags",
     "patch": "npm version patch",
     "publish": "npm publish"

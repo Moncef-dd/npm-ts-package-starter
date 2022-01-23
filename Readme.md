@@ -13,7 +13,10 @@ NPM Package Starter
 ## Commands
 
 * `git add . && git commit -m "commit message"` : to commit the changes
-* `npm run patch` : to run all the stages to validate the code :  
+* `npm run patch` : to run all the stages to deploy the package on npm and git
+  * lint
+  * format (prettier)
+* `npm run publish`
 
 ## Coming
 
